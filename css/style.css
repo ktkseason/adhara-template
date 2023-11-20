@@ -1,0 +1,264 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Patrick+Hand&display=swap');
+
+:root {
+    --color: #ccc;
+    --color-bg: #333;
+
+    --fs-body: 12px;
+
+    --ff-main: 'Merriweather', serif;
+    --ff-sub: 'Patrick Hand', serif;
+}
+
+body {
+    font-family: var(--ff-main);
+    color: var(--color);
+    font-size: var(--fs-body);
+    background-color: var(--color-bg);
+}
+h1, h2, h3, h4, h5 {
+    text-transform: uppercase;
+    font-weight: 300;
+}
+ul {
+    list-style-type: none;
+}
+a {
+    text-decoration: none;
+    color: var(--color);
+}
+a:hover {
+    color: inherit;
+}
+
+.logo {
+    letter-spacing: 2px;
+    transition: all 0.4s ease;
+    font-size: 20px;
+}
+.logo:hover {
+    transform: translateY(-2px);
+}
+.nav-item {
+    position: relative;
+}
+.nav-item::before {
+    content: "";
+    background-color: var(--color);
+    height: 5px;
+    width: 100%;
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    display: none;
+    transition: all 0.4s ease;
+}
+.nav-item:hover::before {
+    display: block;
+}
+@media (max-width: 991px) {
+    .nav-item:hover::before {
+        display: none;
+    }
+}
+.carousel-item {
+    height: 100vh;
+    position: relative;
+}
+.banner-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+.banner-text h1 {
+    letter-spacing: 4px;
+}
+.banner-text p {
+    letter-spacing: 1px;
+}
+.banner-text button,
+.banner-text button a {    
+    border-radius: 0;
+    font-size: 12px;
+}
+.banner-text button {
+    padding-left: 10;
+    padding-right: 40px;
+    position: relative;
+    border: 0;
+}
+.banner-text button a {
+    position: absolute;
+    height: 100%;
+    top: 0;
+    right: 0;
+}
+
+.sub {
+    font-family: var(--ff-sub);
+    font-style: italic;
+    font-size: 18px;
+}
+.collection-text hr {
+    width: 10%;
+    height: 3px;
+    background-color: var(--color);
+    opacity: 1;
+}
+
+.img-holder {
+    overflow: hidden;
+    position: relative;
+}
+.img-holder > img {
+    opacity: 0.5;
+    transition: all 0.4s ease-in-out;
+}
+.img-holder:hover > img {
+    transform: scale(1.3);
+}
+.text-on-img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    letter-spacing: 1px;
+    border: 1px solid var(--color);
+    background-color: rgba(51, 51, 51, 0.2);
+    box-shadow: 1px 1px 5px rgba(204, 204, 204, 0.2);
+}
+.text-on-img > div:first-child {
+    border-bottom: 1px solid var(--color);
+}
+.img-icon {
+    width: 100px;
+    height: 40px;
+}
+.img-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.list-on-img {
+    position: absolute;
+    width: 100%;
+    bottom: 20%;
+    font-size: 30px;
+    font-family: var(--ff-sub);
+    text-transform: uppercase;
+}
+.list-on-img span {
+    font-family: var(--ff-main);
+    font-size: 12px;
+}
+.david {
+    font-family: var(--ff-sub);
+    font-size: 30px;
+    font-style: italic;
+}
+.david-small {
+    font-family: var(--ff-sub);
+    font-style: italic;
+}
+
+.pricing {
+    background: url(../img/mountain-1.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.pricing h3 {
+    font-size: 28px;
+}
+.pricing ul {
+    border-radius: 0;
+}
+.pricing ul li {
+    background-color: var(--color-bg);
+    color: var(--color);
+    font-size: 12px;
+}
+.pricing ul li:first-child {
+    font-size: 22px;
+    font-weight: 700;
+    color: #fff;
+}
+.pricing ul li:nth-child(2) {
+    font-family: var(--ff-sub);
+    font-style: italic;
+    font-size: 18px;
+}
+.pricing .btn {
+    border-radius: 0;
+    font-size: var(--fs-body);
+    border: 0;
+}
+.pricing .btn:hover {
+    background-color: var(--color);
+    color: var(--color-bg);
+}
+.about {
+    background: url(../img/white-tree.png) no-repeat;
+    background-position: center;
+    background-size: contain;
+    position: relative;
+}
+.about .col {
+    z-index: 1;
+}
+.about::before {    
+    background-color: rgba(51, 51, 51,0.9);
+}
+.another::before {    
+    background-color: rgba(51, 51, 51,0.8);
+}
+.about::before,
+.another::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+.icon-size {
+    font-size: 50px;
+}
+.about-img img,
+.img img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.another {
+    position: relative;
+    min-height: 60vh;
+    background: url(../img/mountain-3.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.another div {
+    z-index: 1;
+}
+.another h5 {
+    font-style: italic;
+    font-size: 18px;
+}
+.another p {
+    width: 70%;
+    margin: auto;
+}
+#contact .sub {
+    font-size: 23px;
+}
+#contact li {
+    font-size: 14px;
+}
+.img {
+    width: 50%;
+    height: 300px;
+}
